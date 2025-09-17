@@ -36,7 +36,7 @@ fn main(){
 }
 */
 
-/*-----------Functions--------------------------- */
+/*-----------Functions--------------------------- 
 
 //fn means new function
 fn main(){
@@ -50,6 +50,8 @@ fn main(){
 fn measurement_arguments(value: i32, unit_label: char){
     println!("The value of measurement value is: {value}{unit_label} ");
 }
+
+*/
 
 /*-------Statements and Expressions:---------------
    fn main(){
@@ -77,6 +79,34 @@ fn main(){
     let x = plus_one(5);
     println!("The value of x is: {x}");
 }
-
-
 */
+
+/*--------Control Flow--------------- */
+
+/*fn main(){
+
+    let number = 6;
+
+    if number % 4 == 0{
+        println!("{number} is divible by 4 ");
+    }
+    else if number % 3 == 0{
+        println!("{number} is divisible by 3 ");
+    }
+    else{
+        println!("Number is not divisible by either 4 or 3");
+    }
+}
+*/
+
+//using if in let statement
+//Because if is an expression, we can use it on the right side of a let statement to assign the outcome to a variable
+
+fn main(){
+    let condition = true;
+    let number = if condition {5} else {6};
+    //in this case both are i32 integers if type mismatched you will get an error
+
+    println!("The number is: {number}");
+
+}
