@@ -1,5 +1,5 @@
 fn main(){
-
+/* 
     let str = String::from("Hello");
     //This creates a new String called s1 with the value "hello".
     //Unlike &str string slices, a String is owned and stored on the heap.
@@ -22,8 +22,20 @@ fn calculate_length(s: &String) -> usize{
     //s.len() → Calls the len method of String to get its length (number of characters).
     //The return type is usize (the standard integer type used for sizes and lengths in Rust).
     s.len()
-}
+} */
 
 /*Passing String directly → moves ownership, you can’t use it again in the caller.
 
 Passing &String → borrows ownership, so you can still use it after the function call. */
+
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    println!("{r1} and {r2}");
+    // Variables r1 and r2 will not be used after this point.
+
+    let r3 = &mut s; // no problem
+    println!("{r3}");
+
+}
