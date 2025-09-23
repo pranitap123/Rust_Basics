@@ -1,11 +1,11 @@
 fn main(){
     let mut s = String::from("hello");
 
-    let r1 = &s; // Person r1 gets permission to read.
-    let r2 = &s; // Person r2 gets permission to read.
+    let r1 = &s; // Person r1 gets permission to read. //no problem
+    let r2 = &s; // Person r2 gets permission to read. //no problem
     
     println!("{r1} and {r2}");
-    // This is the LAST time r1 and r2 are used.
+    // This is the LAST time r1 and r2 are used, it wont be used after this point.
     // Their turn is now over. They've walked away from the whiteboard.
     
     // Now that the room is empty, it's safe for someone to write.
@@ -31,5 +31,5 @@ fn change(some_string: &mut String) {
     The change function is designed to accept this "key." Its signature some_string: &mut String specifies that it 
     expects a mutable reference to a String. Inside the function, it uses this reference to call .push_str(), which 
     appends the text , world directly onto the original s variable that some_string points to.
-    
+
 } */

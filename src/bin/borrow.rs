@@ -39,3 +39,18 @@ Passing &String → borrows ownership, so you can still use it after the functio
     println!("{r3}");
 
 }
+
+/*dangling references:
+//wrong code
+fn dang() -> &String{ //wants to return to a reference
+    let str = String::from("Hello");
+    &s; //tries to return a reference
+    //this will create an error since the reference is pointing to nthg and hence is deallocated/destroyed
+} //but s is destroyed here and memory is freed
+
+correct code: return ownership
+
+fn no_dang() -> String { //return actual string
+    let str = String::from("Hello");
+    s // ownership of s is moved out nothing is deallocated
+}*/
