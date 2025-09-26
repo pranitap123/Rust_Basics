@@ -1,6 +1,6 @@
 /*You’re trying to print the struct with {:#?}, which uses Rust’s Debug trait.
 By default, structs don’t implement Debug, so you need to explicitly derive it. */
-
+struct AlwaysEqual;
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 #[derive(Debug)]
@@ -12,10 +12,12 @@ struct User{
 }
 
 fn main(){
+//Unit-like structs can be useful when you need to implement a trait on some type but don’t have any data that you want to store in the type itself.
+    let subject = AlwaysEqual; //Unit like struct
 
     let black = Color(0,0,0);
     let origin = Point(0,0,0);
-    
+
     let mut user1 = User{
         active : true,
         username : String::from("someuser1234"),
